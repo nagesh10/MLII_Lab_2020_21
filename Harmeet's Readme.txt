@@ -1,0 +1,1 @@
+In order to run MNIST you have to upload the model named "mnist_54.h5" and then run MNIST_Harmeet_Singh.ipynb file.
