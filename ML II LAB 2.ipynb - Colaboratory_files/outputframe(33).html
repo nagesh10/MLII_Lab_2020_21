@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- saved from url=(0123)https://xnrwsd5h1p-496ff2e9c6d22116-0-colab.googleusercontent.com/outputframe.html?vrz=colab-20200902-085601-RC00_329712228 -->
+<html theme="light" editor="undefined" style="overflow-y: auto;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+  // Avoid arrow function syntax to stay ES5 compatible for the sake of googlebot.
+  window.addEventListener('message', function(message)  {
+    if (message.source != window.parent) {
+      return;
+    }
+    if (message.data.sandboxed_iframe_evaluation) {
+      // Message is available in scope so evaluated script can get params from
+      // it.
+      window.currentMessage = message;
+      eval.call(null, message.data.sandboxed_iframe_evaluation);
+      delete window.currentMessage;
+    }
+  });
+</script>
+<style>html{--paper-blue-200:#90caf9;--paper-blue-400:#42a5f5;--paper-blue-500:#2196f3;--paper-blue-700:#1976d2;--paper-blue-900:#0d47a1;--paper-blue-a100:#82b1ff;--paper-blue-a200:#448aff;--paper-blue-a400:#2979ff;--paper-blue-a700:#2962ff;--paper-orange-50:#fff3e0;--paper-orange-100:#ffe0b2;--paper-orange-200:#ffcc80;--paper-orange-300:#ffb74d;--paper-orange-400:#ffa726;--paper-orange-500:#ff9800;--paper-orange-700:#f57c00;--paper-grey-50:#fafafa;--paper-grey-100:#f5f5f5;--paper-grey-200:#eeeeee;--paper-grey-300:#e0e0e0;--paper-grey-400:#bdbdbd;--paper-grey-500:#9e9e9e;--paper-grey-600:#757575;--paper-grey-700:#616161;--paper-grey-800:#424242;--paper-grey-900:#212121;--paper-red-100:#ffcdd2;--paper-red-a700:#d50000;--paper-green-a700:#00c853;--paper-white:#ffffff;--google-blue-500:#4285f4;--box-shadow-elevation-2dp:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);--box-shadow-elevation-3dp:0 3px 4px 0 rgba(0,0,0,0.14),0 1px 8px 0 rgba(0,0,0,0.12),0 3px 3px -2px rgba(0,0,0,0.4);--paper-font-subhead-font-size:16px;--paper-font-subhead-font-weight:400;--paper-font-subhead-line-height:24px;--paper-font-body1-font-weight:400;--paper-font-body1-line-height:20px}html{overflow-y:hidden}body{background:var(--colab-primary-surface-color);color:var(--colab-primary-text-color);font-family:var(--colab-chrome-font-family);font-size:var(--colab-chrome-font-size);line-height:1.24;font-weight:400;padding:7px 0 10px 5px;margin:0}h1,h2,h3,h4,h5,h6{color:var(--colab-primary-text-color);font-family:var(--colab-chrome-font-family);font-weight:700;margin-bottom:4px}p,ul{margin-bottom:6px;margin-top:6px}pre{margin-bottom:0px;margin-top:0px}a{color:var(--colab-anchor-color)}div.stream,div.pyout,div.output_text,div.output_text pre{display:inline}div.output_latex,div.output_markdown{max-width:1016px}table.dataframe{border-collapse:collapse;border-spacing:0;border:none;table-layout:fixed}table.dataframe thead{border-bottom:1px solid var(--colab-border-color);font-family:var(--colab-code-font-family);text-align:right}table.dataframe tr,table.dataframe th,table.dataframe td{border:none;padding:0.5em;white-space:normal}table.dataframe th{font-weight:bold}table.dataframe th.col_heading{text-align:right}table.dataframe tbody tr:nth-child(odd){background:var(--colab-secondary-surface-color)}table.dataframe tbody tr:hover,table.dataframe tbody tr:nth-child(odd):hover{background-color:var(--colab-highlighted-surface-color)}table.dataframe td{text-align:right}table.dataTable input.text_filter{width:95%}table.dataTable th{text-align:left}.output_image>img{max-width:100%;vertical-align:bottom}.output_image>img.unconstrained{max-width:unset}.ansibold{font-weight:bold}.ansiblack{color:black}.ansired{color:darkred}.ansigreen{color:darkgreen}.ansiyellow{color:brown}.ansiblue{color:darkblue}.ansipurple{color:darkviolet}.ansicyan{color:steelblue}.ansigray{color:gray}.ansibgblack{background-color:black}.ansibgred{background-color:red}.ansibggreen{background-color:green}.ansibgyellow{background-color:yellow}.ansibgblue{background-color:blue}.ansibgpurple{background-color:magenta}.ansibgcyan{background-color:cyan}.ansibggray{background-color:gray}.output-error span{font-weight:normal!important}.output-error pre{white-space:pre-wrap}input.raw_input{font-family:var(--colab-code-font-family);width:90%}input{background:var(--colab-primary-surface-color);border:1px solid var(--colab-bold-border-color);color:var(--colab-primary-text-color)}#output-area{display:flow-root}#output-area button.colab{background-color:var(--colab-secondary-surface-color);border:0;box-shadow:var(--box-shadow-elevation-3dp);color:var(--colab-primary-text-color);font-family:var(--colab-chrome-font-family);font-size:11px;margin:0px 4px;padding:6px;text-transform:uppercase;user-select:none}#output-area button.colab:hover{background-color:var(--colab-highlighted-surface-color);cursor:pointer}#output-area .output-error button.error-details{background-color:#42a5f5;color:white}#output-area .output-error button.error-details:hover{background-color:#2196f3}#output-area .stdin-widget{align-items:center;display:inline;font-family:var(--colab-code-font-family);margin-right:10px;margin-top:10px;min-width:250px;padding:1px}#output-area .stdin-widget-hidden{visibility:hidden}.pyerr .collapsed .extraneous{display:none}.pyerr .error-expander{align-items:center;cursor:pointer;display:flex}.pyerr .error-expander hr{border:0;border-top:1px solid var(--colab-bold-border-color);flex-grow:1;height:1px;margin:0 10px;padding:0}.pyerr .error-expander hr:first-child{max-width:240px}.pyerr .error-expander svg{fill:var(--colab-icon-color);height:24px;stroke:var(--colab-icon-color);width:24px}.lm-Widget.lm-mod-hidden{display:none!important}.string-repr{display:inline}.string-repr .quote{opacity:75%;user-select:none}.string-repr pre{display:inline;white-space:pre-wrap;word-break:break-all}.string-repr button{color:var(--colab-primary-text-color);cursor:pointer;border:1px solid rgb(118,118,118);border-radius:2px;outline:none}.string-repr button.copy{background:transparent;border:none;margin-left:4px;opacity:0;padding:0;stroke:var(--colab-primary-text-color);transition:opacity 200ms}.string-repr button.copy svg{width:14px}.string-repr.hover button.copy,.string-repr:hover button.copy{opacity:1}.string-repr button.more{background-color:transparent;border-color:transparent;display:none;padding:0;transition:background-color 200ms,border-color 200ms}.string-repr.large button.more{display:inline}.string-repr.large.truncated button .collapse{display:none}.string-repr.large button .expand{display:none}.string-repr.large.truncated button .expand{display:inline}.string-repr.hover button.more,.string-repr:hover button.more{border-color:rgb(118,118,118)}html{--colab-anchor-color:#0000ee;--colab-primary-text-color:var(--paper-grey-900);--colab-primary-surface-color:var(--paper-white);--colab-secondary-surface-color:#f7f7f7;--colab-highlighted-surface-color:var(--paper-grey-300);--colab-border-color:#dadada;--colab-bold-border-color:#111;--colab-icon-color:#616161;--ansi-black:rgb(0,0,0);--ansi-red:rgb(139,0,0);--ansi-green:rgb(0,100,0);--ansi-yellow:rgb(205,205,0);--ansi-blue:rgb(0,0,238);--ansi-magenta:rgb(205,0,205);--ansi-cyan:rgb(70,130,180);--ansi-gray:rgb(229,229,229);--ansi-bright-black:rgb(127,127,127);--ansi-bright-red:rgb(255,0,0);--ansi-bright-green:rgb(0,255,0);--ansi-bright-yellow:rgb(255,255,0);--ansi-bright-blue:rgb(92,92,255);--ansi-bright-magenta:rgb(255,0,255);--ansi-bright-cyan:rgb(0,255,255);--ansi-bright-gray:rgb(255,255,255);--colab-code-font-family:monospace;--colab-chrome-font-family:'Roboto','Noto',sans-serif;--colab-chrome-font-size:14px}html[theme=dark]{--colab-anchor-color:var(--paper-blue-400);--colab-primary-text-color:#d5d5d5;--colab-primary-surface-color:#383838;--colab-secondary-surface-color:#454545;--colab-highlighted-surface-color:#525252;--colab-border-color:var(--paper-grey-900);--colab-bold-border-color:#eee;--colab-icon-color:#f5f5f5;--ansi-black:rgb(127,127,127);--ansi-red:rgb(255,122,136);--ansi-green:rgb(87,187,138);--ansi-yellow:rgb(255,255,102);--ansi-blue:rgb(130,177,255);--ansi-magenta:rgb(205,0,205);--ansi-cyan:rgb(153,187,215);--ansi-gray:rgb(229,229,229)}html[editor=synthwave84]{--colab-anchor-color:#f97e72;--colab-primary-surface-color:#241b2f;--colab-secondary-surface-color:#49549539;--colab-highlighted-surface-color:#372d4b;--colab-border-color:#34294fb3;--ansi-red:#fe4450;--ansi-green:#72f1b8;--ansi-yellow:#f97e72;--ansi-blue:#03edf9;--ansi-magenta:#ff7edb;--ansi-cyan:#03edf9;--ansi-bright-red:#fe4450;--ansi-bright-green:#72f1b8;--ansi-bright-yellow:#fede5d;--ansi-bright-blue:#03edf9;--ansi-bright-magenta:#ff7edb;--ansi-bright-cyan:#03edf9}
+//@ sourceURL=https://colab.research.google.com/v2/external/outputframe.css?vrz=colab-20200902-085601-RC00_329712228</style><!--<base href="https://localhost:8080/">--><base href="."></head><body><div id="output-area"><span id="output-header"> </span><div id="output-body"><div class="stream output-id-19"><div class="output_subarea output_text"><pre>Collecting streamlit
+  Downloading <a rel="nofollow" target="_blank" href="https://files.pythonhosted.org/packages/73/f2/03193332b9ced126141f095a7b0b75a1a5f43665aa1e4eb58d7cc0f69977/streamlit-0.66.0-py2.py3-none-any.whl">https://files.pythonhosted.org/packages/73/f2/03193332b9ced126141f095a7b0b75a1a5f43665aa1e4eb58d7cc0f69977/streamlit-0.66.0-py2.py3-none-any.whl</a> (7.2MB)
+     |████████████████████████████████| 7.2MB 2.6MB/s 
+Requirement already satisfied: astor in /usr/local/lib/python3.6/dist-packages (from streamlit) (0.8.1)
+Requirement already satisfied: packaging in /usr/local/lib/python3.6/dist-packages (from streamlit) (20.4)
+Requirement already satisfied: boto3 in /usr/local/lib/python3.6/dist-packages (from streamlit) (1.14.48)
+Requirement already satisfied: tzlocal in /usr/local/lib/python3.6/dist-packages (from streamlit) (1.5.1)
+Requirement already satisfied: tornado&gt;=5.0 in /usr/local/lib/python3.6/dist-packages (from streamlit) (5.1.1)
+Requirement already satisfied: cachetools&gt;=4.0 in /usr/local/lib/python3.6/dist-packages (from streamlit) (4.1.1)
+Requirement already satisfied: altair&gt;=3.2.0 in /usr/local/lib/python3.6/dist-packages (from streamlit) (4.1.0)
+Requirement already satisfied: botocore&gt;=1.13.44 in /usr/local/lib/python3.6/dist-packages (from streamlit) (1.17.48)
+Collecting enum-compat
+  Downloading <a rel="nofollow" target="_blank" href="https://files.pythonhosted.org/packages/55/ae/467bc4509246283bb59746e21a1a2f5a8aecbef56b1fa6eaca78cd438c8b/enum_compat-0.0.3-py3-none-any.whl">https://files.pythonhosted.org/packages/55/ae/467bc4509246283bb59746e21a1a2f5a8aecbef56b1fa6eaca78cd438c8b/enum_compat-0.0.3-py3-none-any.whl</a>
+Requirement already satisfied: requests in /usr/local/lib/python3.6/dist-packages (from streamlit) (2.23.0)
+Collecting watchdog
+  Downloading <a rel="nofollow" target="_blank" href="https://files.pythonhosted.org/packages/0e/06/121302598a4fc01aca942d937f4a2c33430b7181137b35758913a8db10ad/watchdog-0.10.3.tar.gz">https://files.pythonhosted.org/packages/0e/06/121302598a4fc01aca942d937f4a2c33430b7181137b35758913a8db10ad/watchdog-0.10.3.tar.gz</a> (94kB)
+     |████████████████████████████████| 102kB 12.3MB/s 
+Requirement already satisfied: python-dateutil in /usr/local/lib/python3.6/dist-packages (from streamlit) (2.8.1)
+Requirement already satisfied: pyarrow in /usr/local/lib/python3.6/dist-packages (from streamlit) (0.14.1)
+Requirement already satisfied: numpy in /usr/local/lib/python3.6/dist-packages (from streamlit) (1.18.5)
+Collecting blinker
+  Downloading <a rel="nofollow" target="_blank" href="https://files.pythonhosted.org/packages/1b/51/e2a9f3b757eb802f61dc1f2b09c8c99f6eb01cf06416c0671253536517b6/blinker-1.4.tar.gz">https://files.pythonhosted.org/packages/1b/51/e2a9f3b757eb802f61dc1f2b09c8c99f6eb01cf06416c0671253536517b6/blinker-1.4.tar.gz</a> (111kB)
+     |████████████████████████████████| 112kB 48.3MB/s 
+Collecting base58
+  Downloading <a rel="nofollow" target="_blank" href="https://files.pythonhosted.org/packages/3c/03/58572025c77b9e6027155b272a1b96298e711cd4f95c24967f7137ab0c4b/base58-2.0.1-py3-none-any.whl">https://files.pythonhosted.org/packages/3c/03/58572025c77b9e6027155b272a1b96298e711cd4f95c24967f7137ab0c4b/base58-2.0.1-py3-none-any.whl</a>
+Requirement already satisfied: protobuf&gt;=3.6.0 in /usr/local/lib/python3.6/dist-packages (from streamlit) (3.12.4)
+Requirement already satisfied: toml in /usr/local/lib/python3.6/dist-packages (from streamlit) (0.10.1)
+Requirement already satisfied: pandas&gt;=0.21.0 in /usr/local/lib/python3.6/dist-packages (from streamlit) (1.0.5)
+Collecting validators
+  Downloading <a rel="nofollow" target="_blank" href="https://files.pythonhosted.org/packages/41/4a/3360ff3cf2b4a1b9721ac1fbff5f84663f41047d9874b3aa1ac82e862c44/validators-0.18.1-py3-none-any.whl">https://files.pythonhosted.org/packages/41/4a/3360ff3cf2b4a1b9721ac1fbff5f84663f41047d9874b3aa1ac82e862c44/validators-0.18.1-py3-none-any.whl</a>
+Requirement already satisfied: pillow&gt;=6.2.0 in /usr/local/lib/python3.6/dist-packages (from streamlit) (7.0.0)
+Requirement already satisfied: click&gt;=7.0 in /usr/local/lib/python3.6/dist-packages (from streamlit) (7.1.2)
+Collecting pydeck&gt;=0.1.dev5
+  Downloading <a rel="nofollow" target="_blank" href="https://files.pythonhosted.org/packages/51/1e/296f4108bf357e684617a776ecaf06ee93b43e30c35996dfac1aa985aa6c/pydeck-0.5.0b1-py2.py3-none-any.whl">https://files.pythonhosted.org/packages/51/1e/296f4108bf357e684617a776ecaf06ee93b43e30c35996dfac1aa985aa6c/pydeck-0.5.0b1-py2.py3-none-any.whl</a> (4.4MB)
+     |████████████████████████████████| 4.4MB 43.1MB/s 
+Requirement already satisfied: six in /usr/local/lib/python3.6/dist-packages (from packaging-&gt;streamlit) (1.15.0)
+Requirement already satisfied: pyparsing&gt;=2.0.2 in /usr/local/lib/python3.6/dist-packages (from packaging-&gt;streamlit) (2.4.7)
+Requirement already satisfied: jmespath&lt;1.0.0,&gt;=0.7.1 in /usr/local/lib/python3.6/dist-packages (from boto3-&gt;streamlit) (0.10.0)
+Requirement already satisfied: s3transfer&lt;0.4.0,&gt;=0.3.0 in /usr/local/lib/python3.6/dist-packages (from boto3-&gt;streamlit) (0.3.3)
+Requirement already satisfied: pytz in /usr/local/lib/python3.6/dist-packages (from tzlocal-&gt;streamlit) (2018.9)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.6/dist-packages (from altair&gt;=3.2.0-&gt;streamlit) (2.11.2)
+Requirement already satisfied: entrypoints in /usr/local/lib/python3.6/dist-packages (from altair&gt;=3.2.0-&gt;streamlit) (0.3)
+Requirement already satisfied: jsonschema in /usr/local/lib/python3.6/dist-packages (from altair&gt;=3.2.0-&gt;streamlit) (2.6.0)
+Requirement already satisfied: toolz in /usr/local/lib/python3.6/dist-packages (from altair&gt;=3.2.0-&gt;streamlit) (0.10.0)
+Requirement already satisfied: docutils&lt;0.16,&gt;=0.10 in /usr/local/lib/python3.6/dist-packages (from botocore&gt;=1.13.44-&gt;streamlit) (0.15.2)
+Requirement already satisfied: urllib3&lt;1.26,&gt;=1.20; python_version != "3.4" in /usr/local/lib/python3.6/dist-packages (from botocore&gt;=1.13.44-&gt;streamlit) (1.24.3)
+Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.6/dist-packages (from requests-&gt;streamlit) (2.10)
+Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /usr/local/lib/python3.6/dist-packages (from requests-&gt;streamlit) (3.0.4)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.6/dist-packages (from requests-&gt;streamlit) (2020.6.20)
+Collecting pathtools&gt;=0.1.1
+  Downloading <a rel="nofollow" target="_blank" href="https://files.pythonhosted.org/packages/e7/7f/470d6fcdf23f9f3518f6b0b76be9df16dcc8630ad409947f8be2eb0ed13a/pathtools-0.1.2.tar.gz">https://files.pythonhosted.org/packages/e7/7f/470d6fcdf23f9f3518f6b0b76be9df16dcc8630ad409947f8be2eb0ed13a/pathtools-0.1.2.tar.gz</a>
+Requirement already satisfied: setuptools in /usr/local/lib/python3.6/dist-packages (from protobuf&gt;=3.6.0-&gt;streamlit) (49.6.0)
+Requirement already satisfied: decorator&gt;=3.4.0 in /usr/local/lib/python3.6/dist-packages (from validators-&gt;streamlit) (4.4.2)
+Collecting ipykernel&gt;=5.1.2; python_version &gt;= "3.4"
+  Downloading <a rel="nofollow" target="_blank" href="https://files.pythonhosted.org/packages/52/19/c2812690d8b340987eecd2cbc18549b1d130b94c5d97fcbe49f5f8710edf/ipykernel-5.3.4-py3-none-any.whl">https://files.pythonhosted.org/packages/52/19/c2812690d8b340987eecd2cbc18549b1d130b94c5d97fcbe49f5f8710edf/ipykernel-5.3.4-py3-none-any.whl</a> (120kB)
+     |████████████████████████████████| 122kB 56.3MB/s 
+Requirement already satisfied: traitlets&gt;=4.3.2 in /usr/local/lib/python3.6/dist-packages (from pydeck&gt;=0.1.dev5-&gt;streamlit) (4.3.3)
+Requirement already satisfied: ipywidgets&gt;=7.0.0 in /usr/local/lib/python3.6/dist-packages (from pydeck&gt;=0.1.dev5-&gt;streamlit) (7.5.1)
+Requirement already satisfied: MarkupSafe&gt;=0.23 in /usr/local/lib/python3.6/dist-packages (from jinja2-&gt;altair&gt;=3.2.0-&gt;streamlit) (1.1.1)
+Requirement already satisfied: jupyter-client in /usr/local/lib/python3.6/dist-packages (from ipykernel&gt;=5.1.2; python_version &gt;= "3.4"-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (5.3.5)
+Requirement already satisfied: ipython&gt;=5.0.0 in /usr/local/lib/python3.6/dist-packages (from ipykernel&gt;=5.1.2; python_version &gt;= "3.4"-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (5.5.0)
+Requirement already satisfied: ipython-genutils in /usr/local/lib/python3.6/dist-packages (from traitlets&gt;=4.3.2-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (0.2.0)
+Requirement already satisfied: widgetsnbextension~=3.5.0 in /usr/local/lib/python3.6/dist-packages (from ipywidgets&gt;=7.0.0-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (3.5.1)
+Requirement already satisfied: nbformat&gt;=4.2.0 in /usr/local/lib/python3.6/dist-packages (from ipywidgets&gt;=7.0.0-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (5.0.7)
+Requirement already satisfied: jupyter-core&gt;=4.6.0 in /usr/local/lib/python3.6/dist-packages (from jupyter-client-&gt;ipykernel&gt;=5.1.2; python_version &gt;= "3.4"-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (4.6.3)
+Requirement already satisfied: pyzmq&gt;=13 in /usr/local/lib/python3.6/dist-packages (from jupyter-client-&gt;ipykernel&gt;=5.1.2; python_version &gt;= "3.4"-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (19.0.2)
+Requirement already satisfied: prompt-toolkit&lt;2.0.0,&gt;=1.0.4 in /usr/local/lib/python3.6/dist-packages (from ipython&gt;=5.0.0-&gt;ipykernel&gt;=5.1.2; python_version &gt;= "3.4"-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (1.0.18)
+Requirement already satisfied: simplegeneric&gt;0.8 in /usr/local/lib/python3.6/dist-packages (from ipython&gt;=5.0.0-&gt;ipykernel&gt;=5.1.2; python_version &gt;= "3.4"-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (0.8.1)
+Requirement already satisfied: pickleshare in /usr/local/lib/python3.6/dist-packages (from ipython&gt;=5.0.0-&gt;ipykernel&gt;=5.1.2; python_version &gt;= "3.4"-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (0.7.5)
+Requirement already satisfied: pygments in /usr/local/lib/python3.6/dist-packages (from ipython&gt;=5.0.0-&gt;ipykernel&gt;=5.1.2; python_version &gt;= "3.4"-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (2.1.3)
+Requirement already satisfied: pexpect; sys_platform != "win32" in /usr/local/lib/python3.6/dist-packages (from ipython&gt;=5.0.0-&gt;ipykernel&gt;=5.1.2; python_version &gt;= "3.4"-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (4.8.0)
+Requirement already satisfied: notebook&gt;=4.4.1 in /usr/local/lib/python3.6/dist-packages (from widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (5.3.1)
+Requirement already satisfied: wcwidth in /usr/local/lib/python3.6/dist-packages (from prompt-toolkit&lt;2.0.0,&gt;=1.0.4-&gt;ipython&gt;=5.0.0-&gt;ipykernel&gt;=5.1.2; python_version &gt;= "3.4"-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (0.2.5)
+Requirement already satisfied: ptyprocess&gt;=0.5 in /usr/local/lib/python3.6/dist-packages (from pexpect; sys_platform != "win32"-&gt;ipython&gt;=5.0.0-&gt;ipykernel&gt;=5.1.2; python_version &gt;= "3.4"-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (0.6.0)
+Requirement already satisfied: nbconvert in /usr/local/lib/python3.6/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (5.6.1)
+Requirement already satisfied: terminado&gt;=0.8.1 in /usr/local/lib/python3.6/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (0.8.3)
+Requirement already satisfied: Send2Trash in /usr/local/lib/python3.6/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (1.5.0)
+Requirement already satisfied: testpath in /usr/local/lib/python3.6/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (0.4.4)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.6/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (0.8.4)
+Requirement already satisfied: bleach in /usr/local/lib/python3.6/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (3.1.5)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.6/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (1.4.2)
+Requirement already satisfied: defusedxml in /usr/local/lib/python3.6/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (0.6.0)
+Requirement already satisfied: webencodings in /usr/local/lib/python3.6/dist-packages (from bleach-&gt;nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;pydeck&gt;=0.1.dev5-&gt;streamlit) (0.5.1)
+Building wheels for collected packages: watchdog, blinker, pathtools
+  Building wheel for watchdog (setup.py) ... done
+  Created wheel for watchdog: filename=watchdog-0.10.3-cp36-none-any.whl size=73873 sha256=ae5a1e11e75117aac231a84f7d4d05bfa49af2f64de2f7e9c658fbe25cda2ed2
+  Stored in directory: /root/.cache/pip/wheels/a8/1d/38/2c19bb311f67cc7b4d07a2ec5ea36ab1a0a0ea50db994a5bc7
+  Building wheel for blinker (setup.py) ... done
+  Created wheel for blinker: filename=blinker-1.4-cp36-none-any.whl size=13450 sha256=0b271c82b248fed61981b8dc2268cbfd072d4501c03f781b4b3daa278e2c31c2
+  Stored in directory: /root/.cache/pip/wheels/92/a0/00/8690a57883956a301d91cf4ec999cc0b258b01e3f548f86e89
+  Building wheel for pathtools (setup.py) ... done
+  Created wheel for pathtools: filename=pathtools-0.1.2-cp36-none-any.whl size=8785 sha256=3c076a30664c2eae4d4d87ff616d52559f0bdd5557f3775082df22adad8011f0
+  Stored in directory: /root/.cache/pip/wheels/0b/04/79/c3b0c3a0266a3cb4376da31e5bfe8bba0c489246968a68e843
+Successfully built watchdog blinker pathtools
+<span style="color: var(--ansi-red);">ERROR: google-colab 1.0.0 has requirement ipykernel~=4.10, but you'll have ipykernel 5.3.4 which is incompatible.</span><span>
+Installing collected packages: enum-compat, pathtools, watchdog, blinker, base58, validators, ipykernel, pydeck, streamlit
+  Found existing installation: ipykernel 4.10.1
+    Uninstalling ipykernel-4.10.1:
+      Successfully uninstalled ipykernel-4.10.1
+Successfully installed base58-2.0.1 blinker-1.4 enum-compat-0.0.3 ipykernel-5.3.4 pathtools-0.1.2 pydeck-0.5.0b1 streamlit-0.66.0 validators-0.18.1 watchdog-0.10.3
+</span></pre></div></div><div class="display_data output-id-20"><div class="output_subarea output_text"><pre><span style="font-weight: bold; color: var(--ansi-red);">WARNING: Upgrading ipython, ipykernel, tornado, prompt-toolkit or pyzmq can
+cause your runtime to repeatedly crash or behave in unexpected ways and is not
+recommended. If your runtime won't connect or execute code, you can reset it
+with "Factory reset runtime" from the "Runtime" menu.
+WARNING: The following packages were previously imported in this runtime:
+  [ipykernel]
+You must restart the runtime in order to use newly installed versions.</span></pre></div><div style="padding-top: 10px;"><button class="colab restartruntime">Restart Runtime</button></div></div></div><span id="output-footer"></span></div></body></html>
